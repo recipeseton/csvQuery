@@ -21,7 +21,6 @@ function initializeTable($fileURL){
 
  function displaySelectedColumns($result_column = array()){
    echo '<table border=1 class="table-hover">';
-   //echo '<pre>',print_r($result_column),'</pre>';
    for($j = 0; $j < count($result_column[0]); $j++){
      echo '<tr>';
      for($i = 0; $i < count($result_column); $i++){
@@ -46,8 +45,8 @@ function processColumns($fileURL, $columns = array()){
       array_push($result_column, $result_col);
     }
     else{
-		    echo "column ".$col." not found<br/>";
-	     }
+		echo "column ".$col." not found<br/>";
+	}
   }
   //displaySelectedColumns($result_column);
   return $result_column;
@@ -93,7 +92,7 @@ function inArrayTest($arrayName = array(), $value){
 }
 
 
-
+//This function, in its current form, only accepts and checks 2 conditions
 function mainQuery($fileURL, $columns=array(), $conditions=array(), $border = 1, $class="table-hover"){
   $result = processColumns($fileURL, $columns);
   $rotated = rotateTable($result);
