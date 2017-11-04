@@ -69,6 +69,8 @@ function rotateTable($mat){
     return $mat90;
 }
 
+//Uncomment this function if PHP version < 5.5
+
 // function array_column($arrayName = array(), $key){
 // 	$result = array();
 // 	foreach($arrayName as $array){
@@ -119,8 +121,5 @@ function mainQuery($fileURL, $columns=array(), $conditions=array(), $border = 1,
   echo '</table>';
 
 }
-
-
-
 
 ?>
